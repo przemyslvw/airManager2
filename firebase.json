@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/airmanager2",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
