@@ -1,15 +1,13 @@
 <h2 mat-dialog-title>New Flight Creator</h2>
 
 <mat-dialog-content>
-
-  <app-flight-form></app-flight-form>
-
+  <app-flight-form #flightForm></app-flight-form>
 </mat-dialog-content>
 <mat-dialog-actions>
   <div class="row">
     <div class="col">
       <button mat-raised-button mat-dialog-close>Zamknij</button>
-      <button mat-raised-button color="primary">Nowy</button>
+      <button mat-raised-button color="primary" [disabled]="flightForm.form.invalid">Nowy</button>
     </div>
   </div>
 </mat-dialog-actions>

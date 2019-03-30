@@ -7,7 +7,7 @@ export interface Flight {
     origin: string;
     returnTime: string;
     withSKPlanesDiscount: boolean;
-    key: String;
+    key: string;
 }
 
 export interface Crew {

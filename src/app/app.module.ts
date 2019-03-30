@@ -2,7 +2,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { environment } from 'src/environments/environment.prod';
+import { environment } from 'src/environments/environment';
 import { MaterialModule } from 'src/app/material/material.module';
 import { AngularFireModule } from 'angularfire2';
 import { AppRoutnigModule } from './app-routing.module';
