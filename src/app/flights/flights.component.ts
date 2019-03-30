@@ -23,12 +23,6 @@ export class FlightsComponent {
   oppenNewFlightModal() {
     this.dialog.open(NewFlightComponent)
   }
-  clickMessage = '';
-
-  onClickMe() {
-    this.clickMessage = 'You are my hero!';
-    console.log("elo");
-  }
 
 }
 

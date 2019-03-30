@@ -1,6 +1,6 @@
 import { Crew } from './../../models/flight.model';
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormArray, Validators } from '@angular/forms';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, FormArray, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-flight-form',
@@ -33,12 +33,11 @@ export class FlightFormComponent implements OnInit {
     this.crew.removeAt(i);
   }
 
-  addCrewMember(Crew) {
-    this.crew.push(this.buildCrewMamber());
-    console.log(this.form);
+  addCrewMember() {
+    this.crew.push(this.buildCrewMember());
   }
 
-  buildCrewMamber() {
+  buildCrewMember() {
     return this.formBuilder.group({
       name: '',
       job: ''
@@ -54,7 +53,7 @@ export class FlightFormComponent implements OnInit {
       code: '',
       additionalInformarion: '',
       withSKPlanesDiscount: false,
-      crew: this.formBuilder.array([this.buildCrewMamber()])
+      crew: this.formBuilder.array([this.buildCrewMember()])
     })
   }
 

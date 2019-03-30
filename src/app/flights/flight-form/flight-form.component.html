@@ -40,7 +40,7 @@
       <mat-checkbox formControlName="withSKPlanesDiscount">With SK Discount</mat-checkbox>
     </div>
   </div>
-  <div forArrayName="crew" class="crew-container shadow" *ngFor="let crewMember of crew.controls; index as index">
+  <div formArrayName="crew" class="crew-container shadow" *ngFor="let crewMember of crew.controls;index as index">
     <div class="row crew-header">
       <div class="col">
         <span>Crew Member - {{ index + 1 }}</span>

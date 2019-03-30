@@ -7,7 +7,7 @@
   <div class="row">
     <div class="col">
       <button mat-raised-button mat-dialog-close>Zamknij</button>
-      <button mat-raised-button color="primary" [disabled]="flightForm.form.invalid">Nowy</button>
+      <button mat-raised-button color="primary" [disabled]="flightForm.form.invalid" (click)="createFlight()">Nowy</button>
     </div>
   </div>
 </mat-dialog-actions>
