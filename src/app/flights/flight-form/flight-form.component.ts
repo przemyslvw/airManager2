@@ -1,6 +1,7 @@
 import { Crew } from './../../models/flight.model';
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormArray, FormControl, Validators } from '@angular/forms';
+// import { flightCodeValidator } from './code.validator';
 
 @Component({
   selector: 'app-flight-form',
@@ -50,7 +51,13 @@ export class FlightFormComponent implements OnInit {
       destination: ['', { validators: [Validators.required] }],
       departureTime: ['', { validators: [Validators.required] }],
       returnTime: ['', { validators: [Validators.required] }],
-      code: '',
+      code: ['SK', {
+        validators: [
+          Validators.required,
+          Validators.minLength(4),
+          Validators.maxLength(7)
+        ]
+      }],
       additionalInformarion: '',
       withSKPlanesDiscount: false,
       crew: this.formBuilder.array([this.buildCrewMember()])
